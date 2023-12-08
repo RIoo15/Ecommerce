@@ -4,8 +4,10 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Counter from "../components/Counter";
+import {useNavigate} from "react-router-dom"
 
 function Productpage() {
+  const navigate = useNavigate();
   return (
     <div>
       <Announce />
@@ -54,7 +56,7 @@ function Productpage() {
             <Counter />
           </div>
 
-          <button className="btn mt-5">Add to cart</button>
+          <button className="btn mt-5" onClick={()=>navigate("/Cart")}>Add to cart</button>
         </div>
       </div>
 

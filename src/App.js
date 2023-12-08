@@ -4,6 +4,8 @@ import Register from "./pages/Register";
 import CategoryPage from "./pages/CategoryPage";
 import ProductPage from "./pages/Productpage";
 import Cart from "./pages/Cart";
+import {Routes,Route} from "react-router-dom"
+
 
 
 
@@ -12,8 +14,15 @@ import Cart from "./pages/Cart";
 function App() {
   return (
     <div className="App">
+    <Routes>
+      
+      <Route exact path="*" element={<Home/>}/>
+      <Route exact path="/Register" element={<Register/>}/>
+      <Route exact path="/Login" element={<Login/>}/>
+      <Route exact path="/Productpage" element={<ProductPage/>}/>
+      <Route exact path="/Cart" element={<Cart/>}/>
+      </Routes>   
    
-   <Home/>
     </div>
   );
 }
